@@ -1,1 +1,132 @@
 /*FirstCompoent.module.css*/
+.container {
+  display: flex;
+  position: relative;
+  min-height: 500px;
+  background: #eaece7;
+  overflow: hidden;
+}
+
+/* LEFT SECTION */
+.leftSection {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+.content {
+  line-height: 1.8;
+}
+
+.greeting {
+  font-family: "Patua One", serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.name {
+  font-family: "Patua One", serif;
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.role {
+  font-size: 20px;
+  margin: 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.socialIcons a {
+  color: black;
+  transition: transform 0.3s;
+}
+
+.socialIcons a:hover {
+  transform: scale(1.2);
+}
+
+/* RIGHT SECTION */
+.rightSection {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: black;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 380px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .name {
+    font-size: 28px;
+  }
+
+  .role {
+    font-size: 18px;
+  }
+
+  .profileImage {
+    width: 300px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .leftSection {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .rightSection {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    clip-path: none;
+  }
+
+  .profileImage {
+    width: 250px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .role {
+    font-size: 16px;
+  }
+}
