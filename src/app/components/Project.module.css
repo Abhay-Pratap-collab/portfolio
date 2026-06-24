@@ -1,0 +1,70 @@
+/* Project.module.css*/
+.projectCard {
+  width: 100%;
+  background: #252525;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: white;
+  margin: 0 0 15px 0;
+  font-size: 28px;
+  word-break: break-word;
+}
+
+.description {
+  color: white;
+  margin: 0;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.projectCard {
+  width: 100%;
+  background: #252525;
+  padding: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .projectCard {
+    padding: 18px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .projectCard {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

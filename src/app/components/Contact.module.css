@@ -1,0 +1,176 @@
+/*Contact.module.css*/
+.contactSection {
+    min-height: 100vh;
+    background: #EDECEC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.contactContainer {
+    width: 100%;
+    max-width: 1100px;
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+
+    border-radius: 30px;
+
+    padding: 50px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.contactContainer:hover {
+    transform: translateY(-3px);
+}
+
+.headingContainer {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contactTitle {
+    font-size: 3rem;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.contactSubtitle {
+    color: #666;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #ffffff;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.contactInfo:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contactInfo h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.contactInfo p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.icon {
+    font-size: 35px !important;
+}
+
+.contactLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resumeButton {
+    margin-top: 10px !important;
+    border-radius: 50px !important;
+    padding: 12px 25px !important;
+    width: fit-content;
+}
+
+.sendButton {
+    height: 55px;
+    border-radius: 50px !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contactContainer {
+        padding: 35px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .contactSection {
+        padding: 40px 15px;
+    }
+
+    .contactContainer {
+        padding: 25px 20px;
+    }
+
+    .contactTitle {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .contactSubtitle {
+        font-size: 14px;
+    }
+
+    .contactInfo {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .icon {
+        font-size: 28px !important;
+    }
+
+    .contactInfo h3 {
+        font-size: 16px;
+    }
+
+    .contactInfo p {
+        font-size: 14px;
+    }
+
+    .resumeButton {
+        width: 100%;
+    }
+}

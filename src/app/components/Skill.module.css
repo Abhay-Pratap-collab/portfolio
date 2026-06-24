@@ -1,0 +1,115 @@
+/*Skill.module.css*/
+.skillsContainer {
+    min-height: 100vh;
+    background: #EDECEC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+.skillIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skillIcon svg {
+    width: 80px;
+    height: 80px;
+}
+
+.skillIcon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.skillsHeading {
+    width: 200px;
+    height: 60px;
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.sectionTitle {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 50px;
+    margin-bottom: 25px;
+}
+
+.sectionTitle h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.skillsGrid {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 70px;
+}
+
+.skillCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.skillIcon {
+    font-size: 75px;
+    margin-bottom: 15px;
+}
+
+.skillCard h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .sectionTitle {
+        padding-left: 20px;
+    }
+
+    .sectionTitle h2 {
+        font-size: 26px;
+    }
+
+    .skillIcon {
+        font-size: 60px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .skillsHeading {
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .sectionTitle h2 {
+        font-size: 22px;
+    }
+
+    .skillIcon {
+        font-size: 50px;
+    }
+
+    .skillCard h4 {
+        font-size: 14px;
+    }
+}

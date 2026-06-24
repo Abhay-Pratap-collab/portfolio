@@ -1,4 +1,5 @@
 import { Grid, Box, Icon } from "@mui/material"
+import style from "./Skill.module.css"
 export default function Skill() {
 
     const Skills = [{
@@ -168,129 +169,79 @@ export default function Skill() {
         },
 
     ]
+
     return (
         <section id="skill">
+            <div className={style.skillsContainer}>
 
-
-            <div>
-
-                <div
-                    style={{
-                        display: "flex",
-                        height: "100%",
-                        background: "#EDECEC",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        padding: '10px',
-                        gap: "30px"   // 👈 gap between children
-                    }}
-                >
-
-                    <div
-                        style={{
-                            width: "200px",
-                            height: "60px",
-                            border: "solid 4px black",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            letterSpacing: "5px",
-                            fontWeight: 300
-                        }}
-                    >
-                        Skills
-
-                    </div>
-                    <div style={{ display: 'flex', width: '100%', padding: '20px', marginLeft: '200px' }}>
-                        <Box>
-                            <h1>
-                                using Now :
-                            </h1>
-
-                        </Box>
-                    </div>
-
-                    <div
-                        style={{
-                            display: "flex",
-                            flexWrap: "wrap",
-                            gap: "30px",
-                            marginTop: "20px",
-                        }}
-                    >
-                        <Grid container spacing={3}>
-                            {Skills.map((item, index) => (
-                                <Grid size={3} key={index}>
-                                    <Box
-                                        sx={{
-
-                                        }}
-                                    >
-                                        <div style={{ marginLeft: '150px' }}>
-
-                                            <div style={{ width: '90px', gap: '18px', display: 'flex' }}>
-
-                                                {item.icon}
-                                            </div>
-                                            <div style={{ display: 'flex', padding: '15px' }}>
-
-
-                                                <h4>{item.title}</h4>
-                                            </div>
-                                        </div>
-                                    </Box>
-                                </Grid>
-                            ))}
-                        </Grid>
-
-                    </div>
-                    <div style={{ display: 'flex', width: '100%', padding: '20px', marginLeft: '200px' }}>
-                        <Box>
-                            <h1>
-                                Learning :
-                            </h1>
-
-                        </Box>
-                    </div>
-
-                    <div
-                        style={{
-                            display: "flex",
-                            flexWrap: "wrap",
-                            gap: "30px",
-                            marginTop: "15px",
-                        }}
-                    >
-                        <Grid container spacing={3}>
-                            {Learning.map((item, index) => (
-                                <Grid size={3} key={index}>
-                                    <Box
-                                        sx={{
-
-                                        }}
-                                    >
-                                        <div style={{ marginLeft: '150px' }}>
-
-                                            <div style={{ width: '90px', gap: '25px', display: 'flex' }}>
-
-                                                {item.icon}
-                                            </div>
-                                            <div style={{ display: 'flex', padding: '15px' }}>
-
-
-                                                <h4>{item.title}</h4>
-                                            </div>
-                                        </div>
-                                    </Box>
-                                </Grid>
-                            ))}
-                        </Grid>
-
-                    </div>
+                <div className={style.skillsHeading}>
+                    SKILLS
                 </div>
+
+                <div className={style.sectionTitle}>
+                    <h2>Using Now :</h2>
+                </div>
+
+                <Grid
+                    container
+                    spacing={4}
+                    justifyContent="center"
+
+                    className={style.skillsGrid}
+                >
+                    {Skills.map((item, index) => (
+                        <Grid
+
+                            key={index}
+                            size={{
+                                xs: 6,
+                                sm: 4,
+                                md: 3,
+                            }}
+                        >
+                            <Box className={style.skillCard}>
+                                <div className={style.skillIcon}>
+                                    {item.icon}
+                                </div>
+
+                                <h4>{item.title}</h4>
+                            </Box>
+                        </Grid>
+                    ))}
+                </Grid>
+
+                <div className={style.sectionTitle}>
+                    <h2>Learning :</h2>
+                </div>
+
+                <Grid
+                    container
+                    spacing={4}
+                    justifyContent="center"
+                    className={style.skillsGrid}
+                >
+                    {Learning.map((item, index) => (
+                        <Grid
+                            size={{
+                                xs: 6,
+                                sm: 4,
+                                md: 3,
+                            }}
+
+                            key={index}
+                        >
+                            <Box className={style.skillCard}>
+                                <div className={style.skillIcon}>
+                                    {item.icon}
+                                </div>
+
+                                <h4>{item.title}</h4>
+                            </Box>
+                        </Grid>
+                    ))}
+                </Grid>
 
             </div>
         </section>
-    )
+    );
 }
